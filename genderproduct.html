@@ -1,0 +1,68 @@
+<html>
+<head>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="Style.css">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bitter|Open+Sans|Oswald|Roboto" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+</head>
+<body>
+<div class=" row header">
+  <div class="col-md-2 col-xs-4">
+    <img src="myntra-logo.jpg">
+  </div>
+  <div class="app-name col-md-6 col-md-offset-2 col-xs-4">
+    <h1>MYNTRA</h1>
+  </div>
+
+  <div class="cart col-md-2 col-xs-4">
+  <i class="fa fa-shopping-cart fa-5x" aria-hidden="true"></i>
+  </div>
+</div>
+
+<div class="row search-myntra">
+<div class="container col-md-1 col-xs-1"align="left">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="genderproduct.html">All</a>
+  <a href="genderproduct.html">Men's</a>
+  <a href="genderproduct.html">Women's</a>
+  <a href="#">Cart</a>
+  <a href="About.html">About Us</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+</div>
+
+  <div class="Search col-md-6  col-xs-4">
+    <input type="text" name="search" placeholder="search by brandname or productname">
+</div>
+    <div class="search-button col-md-4 col-xs-6">
+    <button class="button button1">Search</button>
+    <button class="button button2">Sell</button>
+  </div>
+</div>
+<div class="product"></div>
+<script src="script.js"></script>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</body>
+</html>
