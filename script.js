@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
   $.ajax({
     url:"http://acadprojects.com/py/fabricKart/sort/items",
@@ -14,10 +15,22 @@ $(document).ready(function(){
         var productDiv=$("<div class='productcontainer'></div>").text(product["item_name"]);
         var img=$("<img>").attr("src",product["image"]);
         var brandName=$("<div class='brand-name'></div>").text(product["brand"]);
-        var icon=  "<i class='fa fa-shopping-cart' aria-hidden='true'></i>"
+        var icon=  "<i class='fa fa-shopping-cart'id='fa' aria-hidden='true'></i>"
 
         element=$(element).append(img,productDiv,brandName,icon);
         $('.product').append(element);
+        $(".product-container").click(function() {
+          var productName=$($(this).find(".productcontainer")).text();
+          var imageSource=$($(this).find("img")).attr("src");
+          var brandName=$($(this).find(".brand-name")).text();
+          localStorage.setItem("productName",productName);
+          localStorage.setItem("image",imageSource);
+
+          localStorage.setItem("brandname",brandName);
+          windows.location.href="product.html";
+
+        });
+
 
 
       });
