@@ -129,10 +129,11 @@ padding-left: 30px;
 
 }
 .slideshow{
-  height: 400px;
+
 }
 .mySlides{
   width: 100vw;
+  text-align: center;
 
 }
 
@@ -144,7 +145,7 @@ padding-left: 30px;
 
   z-index: 1;
   position: absolute;
-left:
+
 
 
 
@@ -191,7 +192,7 @@ position:relative;
 
   box-shadow: 0 4px 4px rgba(0,0,0,0.2);
     transition: 0.3s;
- padding-left: 10px;
+
 
 
 
@@ -225,5 +226,37 @@ position:relative;
   text-align: center;
   margin-left: 150px;
   margin-top: 400px;
+
+}
+.des{
+  display:none;
+}
+.cost{
+  display: none;
+}
+.seller{
+  display: none;
+
+}
+.number{
+  display: none;
+}
+.product-name {
+  text-align: center;
+  font-weight: 40px;
+  font-family: 'Droid Serif',sans-serif;
+  color:  #C12E80 ;
+  font-size: 35px;
+}
+span{
+  font-size: 15px;
+  font-family:'Droid Serif', sans-serif;
+  margin: 10px;
+  color: #515A5A  ;
+}
+.brandname{
+  font-size: 15px;
+  font-weight: 300;
+  font-family: 'Droid Serif', sans-serif;
 
 }

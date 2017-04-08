@@ -1,6 +1,190 @@
 <html>
 <head>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="Style.css">
+<link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+ <link rel="stylesheet" href="font-awesome\css\font-awesome.css" >
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|Roboto" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Bitter|Open+Sans|Oswald|Roboto" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/JavaScript" src="script.js"></script>
+<style>
+div.stars {
+  width: 270px;
+  display: inline-block;
+}
+
+input.star { display: none; }
+
+label.star {
+  float: right;
+  padding: 10px;
+  font-size: 36px;
+  color: #444;
+  transition: all .2s;
+}
+
+input.star:checked ~ label.star:before {
+  content: '\f005';
+  color: #FD4;
+  transition: all .25s;
+}
+
+input.star-5:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.star-1:checked ~ label.star:before { color: #F62; }
+
+label.star:hover { transform: rotate(-15deg) scale(1.3); }
+
+label.star:before {
+  content: '\f006';
+  font-family: FontAwesome;
+}
+</style>
 </head>
 <body>
+  <div class=" row header">
+    <div class="col-md-2 col-xs-4">
+      <img src="myntra-logo.jpg">
+    </div>
+    <div class="app-name col-md-6  col-xs-4">
+      <h1>MYNTRA</h1>
+    </div>
+
+    <div class="cart col-md-2 col-xs-4">
+
+
+        <i class="fa fa-shopping-cart fa-5x" aria-hidden="true"></i>
+
+    </div>
+  </div>
+
+  <div class="row search-myntra">
+  <div class="container col-md-1 col-xs-1"align="left">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="genderproduct.html">All</a>
+    <a href="genderproduct.html">Men's</a>
+    <a href="genderproduct.html">Women's</a>
+    <a href="#">Cart</a>
+    <a href="About.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  </div>
+
+    <div class="Search col-md-6 col-xs-4">
+      <input type="text" name="search" placeholder="search by brandname or productname">
+  </div>
+      <div class="search-button col-md-4 col-xs-6">
+      <button class="button button1">Search</button>
+      <button class="button button2">Sell</button>
+    </div>
+  </div>
+
+  <div class="container product-description">
+    <div class="row">
+    <div class=" col-xs-12 product-name">
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-md-4 image">
+      </div>
+
+
+
+<div class="col-md-8 col-xs-12 brand-desc">
+  <div class="row brandname-div head">
+  <span class="col-md-2 sub">Brand Name: </span>
+  <span class="brandname col-md-6"></span>
+
+</div>
+<div class="row descr-div head">
+  <span class="col-md-2 sub">description: </span>
+  <span class=" col-md-6 descr"></span>
+</div>
+<div class="row  soldby-div head">
+  <span class="col-md-2 sub">Sold-By: </span>
+  <span class="soldby col-md-6"></span>
+</div>
+<div class="row quant -div head">
+  <span class="col-md-2 sub">Quantity: </span>
+  <span class="quant col-md-6"></span>
+</div>
+
+<div class=" row price-div head">
+  <span class="col-md-2 sub">Cost: </span>
+  <span class="price col-md-6"></span>
+</div>
+<div class="col-md-4"id="cartbutton">
+  <button>Add To Cart </button>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="stars">
+<form action="">
+  <input class="star star-5" id="star-5" type="radio" name="star"/>
+  <label class="star star-5" for="star-5"></label>
+  <input class="star star-4" id="star-4" type="radio" name="star"/>
+  <label class="star star-4" for="star-4"></label>
+  <input class="star star-3" id="star-3" type="radio" name="star"/>
+  <label class="star star-3" for="star-3"></label>
+  <input class="star star-2" id="star-2" type="radio" name="star"/>
+  <label class="star star-2" for="star-2"></label>
+  <input class="star star-1" id="star-1" type="radio" name="star"/>
+  <label class="star star-1" for="star-1"></label>
+</form>
+</div>
+</div>
+</div>
+
+
+  <script>
+$(".product-name").append(localStorage.getItem("productName"));
+var image=$("<img>").attr("src",localStorage.getItem("image"));
+$(".image").append(image);
+$(".brandname").append(localStorage.getItem("brandname"));
+$(".descr").append(localStorage.getItem("description"));
+$(".soldby").append(localStorage.getItem("soldby"));
+$(".quant").append(localStorage.getItem("quantity"));
+$(".price").append(localStorage.getItem("pcost"));
+$("#cartbutton").click(function(){
+
+});
+
+
+
+
+
+  </script>
+  <script>
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+  }
+
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+
+<script>
+
+</script>
+
 </body>
 </html>

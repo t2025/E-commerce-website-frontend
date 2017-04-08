@@ -10,11 +10,12 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="Style.css">
 <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
- <link rel="stylesheet" href="font-awesome\css\font-awesome.css" >
+
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|Roboto" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Bitter|Open+Sans|Oswald|Roboto" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/JavaScript" src="script.js"></script>
@@ -60,7 +61,7 @@
 </div>
 <div id="sell-myntra" class="col-md-6 col-md-offset-4 col-xs-12">
   <h1>Sell On Myntra</h1>
-  <form>
+  <form name="Sellform" onsubmit="return validateform()">
     <label for="pname">Product-Name</lable>
       <input type="text" id=pname name="productname">
       <label for="bname">Brand Name</lable>
@@ -113,23 +114,9 @@
     <input type="text" id="email">
     <label for="phonenumber">Phone Number</label>
     <input type="text" id="number">
-    <table class="cart">
-      <tr>
-        <th>Item</th>
-        <th>Quantity</th>
-        <th>Price</th>
-        <th>Amount</th>
-      </tr>
-      <tr>
-        <td>Shirt</td>
-        <td>2</td>
-        <td>250</td>
-        <td>500</td>
-      </tr>
-    </table>
-    <button id="pay">Pay</button>
-    <button id="close">Close</button>
-  </form>
+    <ul id="productlist">
+      <li id="product-list"></li>
+
 </div>
 <div class="slideshow">
   <img class="mySlides" src="slideshow1.jpg">
@@ -190,6 +177,23 @@ $("#close").click(function(){
   $("#sell-myntra").hide();
 });
 </script>
+<script>
+function validateform()
+{
+  var x=document.forms["Sellform"]["productname"].value;
+  var x=document.forms["Sellform"]["brandname"].value;
+  var x=document.forms["Sellform"]["category"].value;
+var x=  document.forms["Sellform"]["description"].value;
+var x=document.forms["Sellform"]["discount"].value;
+ var x=document.forms["Sellform"]["price"].value;
+
+  if(x==""){
+  alert("All fields are mandatory");
+  return false;
+}
+}
+</script>
+
 
 
 
