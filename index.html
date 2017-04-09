@@ -61,7 +61,7 @@
 </div>
 <div id="sell-myntra" class="col-md-6 col-md-offset-4 col-xs-12">
   <h1>Sell On Myntra</h1>
-  <form name="Sellform" onsubmit="return validateform()">
+  <form name="Sellform" onsubmit="return validateform()" method="post">
     <label for="pname">Product-Name</lable>
       <input type="text" id=pname name="productname">
       <label for="bname">Brand Name</lable>
@@ -106,16 +106,30 @@
     <button id="close">Close</button>
   </form>
 </div>
-<div id="cart">
-  <form id="purchase">
+<div id="cart" class="col-md-6 col-md-offset-4 col-xs-12">
+  <h1> Cart</h1>
+  <form id="purchase" method="put" name="cartform" onsubmit="return validatecartform()">
     <label for="name">Name</label>
-    <input type="text" id="name">
+    <input type="text" id="name" name="name">
     <label for="email">Email</label>
-    <input type="text" id="email">
+    <input type="text" id="email" name="email">
     <label for="phonenumber">Phone Number</label>
-    <input type="text" id="number">
-    <ul id="productlist">
-      <li id="product-list"></li>
+    <input type="text" id="number" name="number">
+    <div class="row">
+    <ul id="product-list" class="col-md-4">
+    Product Name
+    </ul>
+    <ul class="col-md-4"id="cost-list">
+    Price
+    </ul>
+    <ul class="col-md-4"id="quant-list">
+      Quantity
+    </ul>
+
+</div>
+<button>Pay</button>
+<button id="close">Close</button>
+</div>
 
 </div>
 <div class="slideshow">
@@ -129,17 +143,19 @@
 
 <div class="product"></div>
 <div class="page col-md-6 col-md-offset-6 col-xs-6 col-xs-offset-6">
-  <a href="">1</a>
-  <a href="">2</a>
-  <a href="">3</a>
-  <a href="">4</a>
-  <a href="">5</a>
+  <a href="index.html">1</a>
+  <a href="index.html">2</a>
+  <a href="index.html">3</a>
+  <a href="index.html">4</a>
+  <a href="index.html">5</a>
 </div>
+
+
 
 
 <script>
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.width = "300px";
 }
 
 function closeNav() {
@@ -180,6 +196,19 @@ $("#close").click(function(){
 <script>
 function validateform()
 {
+  var x=document.forms["cartform"]["name"].value;
+  var x=document.forms["cartform"]["email"].value;
+  var x=document.forms["cartform"]["number"].value;
+
+  if(x==""){
+  alert("All fields are mandatory");
+  return false;
+}
+}
+</script>
+<script>
+function validatecartform()
+{
   var x=document.forms["Sellform"]["productname"].value;
   var x=document.forms["Sellform"]["brandname"].value;
   var x=document.forms["Sellform"]["category"].value;
@@ -193,6 +222,7 @@ var x=document.forms["Sellform"]["discount"].value;
 }
 }
 </script>
+
 
 
 
