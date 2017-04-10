@@ -40,6 +40,7 @@
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="index.html">Home</a>
+
   <a href="genderproduct.html">All</a>
   <a href="genderproduct.html">Men's</a>
   <a href="genderproduct.html">Women's</a>
@@ -47,7 +48,7 @@
   <a href="About.html">About Us</a>
   <a href="contact.html">Contact Us</a>
 </div>
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  <span style="font-size:30px;cursor:pointer; margin-top:0px;" onclick="openNav()" class="navspan">&#9776; </span>
 </div>
 
   <div class="Search col-md-6 col-xs-4">
@@ -62,10 +63,11 @@
 <div id="sell-myntra" class="col-md-6 col-md-offset-4 col-xs-12">
   <h1>Sell On Myntra</h1>
   <form name="Sellform" onsubmit="return validateform()" method="post">
-    <label for="pname">Product-Name</lable>
+    <label for="pname">Product-Name</label>
       <input type="text" id=pname name="productname">
-      <label for="bname">Brand Name</lable>
+      <label for="bname">Brand Name</label>
         <input type="text" id="bname" name="brandname">
+
         <select id="size" name="size">
         <option value="Size">Size</option>
         <option value="small">Small</option>
@@ -104,6 +106,7 @@
     <input type="text" id="description" name="description">
     <button>Sell</button>
     <button id="close">Close</button>
+
   </form>
 </div>
 <div id="cart" class="col-md-6 col-md-offset-4 col-xs-12">
@@ -116,19 +119,19 @@
     <label for="phonenumber">Phone Number</label>
     <input type="text" id="number" name="number">
     <div class="row">
-    <ul id="product-list" class="col-md-4">
+    <ul id="product-list" class="col-md-4 col-xs-4">
     Product Name
     </ul>
-    <ul class="col-md-4"id="cost-list">
+    <ul class="col-md-4 col-xs-4"id="cost-list">
     Price
     </ul>
-    <ul class="col-md-4"id="quant-list">
+    <ul class="col-md-4 col-xs-4"id="quant-list">
       Quantity
     </ul>
 
 </div>
 <button>Pay</button>
-<button id="close">Close</button>
+<button id="closecart">Close</button>
 </div>
 
 </div>
@@ -193,6 +196,12 @@ $("#close").click(function(){
   $("#sell-myntra").hide();
 });
 </script>
+<script>
+$("#closecart").click(function(){
+  $("#cart").hide();
+});
+</script>
+
 <script>
 function validateform()
 {

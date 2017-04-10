@@ -11,7 +11,7 @@
 
 .search-myntra{
   width: 100vw;
-  height: 100px;
+  height: 80px;
   border-top: solid black 2px;
   border-bottom: solid black 2px;
 
@@ -23,7 +23,7 @@
 
 }
 .Search input[type=text] {
-    width: 130px;
+    width: 100px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -31,7 +31,7 @@
     background-color: white;
 
      width: 130px;
-     margin-top: 20px;
+     margin-top: 0px;
 
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -51,7 +51,7 @@
 }
 .search-button {
 
-margin-top: 20px;
+margin-top: 10px;
 margin-left: 20px;
 padding-left: 30px;
 
@@ -99,11 +99,11 @@ padding-left: 30px;
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
-    top: 100px;
+    top: 0px;
     left: 0;
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    padding-top: 0px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 .sidenav a {
@@ -114,6 +114,7 @@ padding-left: 30px;
     display: block;
     transition: 0.3s;
     font-family: 'Droid serif',cursive;
+    margin-top: 10px;
 }
 .sidenav a:hover, .offcanvas a:focus{
     color: #f1f1f1;
@@ -128,13 +129,16 @@ padding-left: 30px;
 }
 
 }
-.slideshow{
+.slideshow  {
 
 }
 .mySlides{
   width: 100vw;
   text-align: center;
 
+}
+.spannav {
+  margin-top: 0px;
 }
 
 #sell-myntra{
@@ -158,8 +162,16 @@ padding-left: 30px;
 }
 #sell-myntra label{
   color: #C12E80;
-  font-family: Roboto,sans-serif
+  font-family: 'Droid Serif',sans-serif
 
+}
+#sell-myntra select{
+  color: #C12E80;
+  font-family: 'Droid Serif',sans-serif
+}
+#sell-myntra button{
+  color: #C12E80;
+  font-family: 'Droid Serif',sans-serif
 }
 input[type=text] {
     width: 100%;
@@ -200,6 +212,12 @@ position:relative;
 #cart ul{
   color: #C12E80;
   font-family: 'Droid Serif',sans-serif
+
+}
+
+#cart button{
+  color: #C12E80;
+  font-family: 'Droid Serif',sans-serif;
 
 }
 .product{
@@ -273,10 +291,15 @@ margin-left: 100px;
 }
 .product-name {
   text-align: center;
-  font-weight: 40px;
+  font-weight: 400px;
   font-family: 'Droid Serif',sans-serif;
   color:  #C12E80 ;
   font-size: 35px;
+}
+@media(max-width: 400px){
+  .product-name{
+    font-size: 40px;
+  }
 }
 span{
   font-size: 15px;
@@ -284,9 +307,38 @@ span{
   margin: 10px;
   color: #515A5A  ;
 }
+@media(max-width: 400px){
+  span{
+    font-size: 25px;
+    margin: 20px;
+      color: #515A5A  ;
+      font-family:'Droid Serif', sans-serif;
+
+  }
+}
 .brandname{
   font-size: 15px;
   font-weight: 300;
   font-family: 'Droid Serif', sans-serif;
 
+}
+.image{
+
+    box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+      transition: 0.3s;
+      width: 300px;
+      text-align: center;
+
+}
+.cartbutton{
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  padding-left: 10px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  background-color:#C12E80 ;
+  font-size: 20px;
+  width: 170px;
+  font-family: 'Droid Serif',cursive;
 }

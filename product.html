@@ -115,13 +115,13 @@ label.star:before {
 </div>
 <div class="row descr-div head">
   <span class="col-md-2 sub">description: </span>
-  <span class=" col-md-6 col-xs-8 descr"></span>
+  <span class=" col-md-6  descr"></span>
 </div>
 <div class="row  soldby-div head">
   <span class="col-md-2 sub">Sold-By: </span>
   <span class="soldby col-md-6"></span>
 </div>
-<div class="row quant -div head">
+<div class="row quant-div head">
   <span class="col-md-2 sub">Quantity: </span>
   <span class="quant col-md-6"></span>
 </div>
@@ -130,9 +130,7 @@ label.star:before {
   <span class="col-md-2 sub">Cost: </span>
   <span class="price col-md-6"></span>
 </div>
-<div class="col-md-4 col-xs-12"id="cartbutton">
-  <button>Add To Cart </button>
-</div>
+
 </div>
 </div>
 <div class="row">
@@ -151,6 +149,9 @@ label.star:before {
 </form>
 </div>
 </div>
+<div class="col-md-4 col-md-offset-6 col-xs-12"id="cartbutton">
+  <button class="cartbutton">Add To Cart </button>
+</div>
 </div>
 
 
@@ -161,10 +162,10 @@ $(".image").append(image);
 $(".brandname").append(localStorage.getItem("brandname"));
 $(".descr").append(localStorage.getItem("description"));
 $(".soldby").append(localStorage.getItem("soldby"));
-$(".quant").append(localStorage.getItem("quantity"));
+$(".quant").append(localStorage.getItem("itemnumber"));
 $(".price").append(localStorage.getItem("pcost"));
 $("#cartbutton").click(function(){
-
+alert('The item has been added to cart');
 });
 
 
@@ -174,7 +175,7 @@ $("#cartbutton").click(function(){
   </script>
   <script>
   function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("mySidenav").style.width = "300px";
   }
 
   function closeNav() {
