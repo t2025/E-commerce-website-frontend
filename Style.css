@@ -225,13 +225,13 @@ position:relative;
 .product{
   text-align: center;
 overflow: hidden;
-width: 1260px;
+
 }
 @media(max-width: 768px)
 {
   .product{
     overflow: hidden;
-    width :100vw;
+
   }
 }
 .product-container{
@@ -239,7 +239,7 @@ width: 1260px;
   text-align: center;
   margin-top:30px;
 margin-left: 100px;
-width: 320px;
+width: 340px;
   box-shadow: 0 4px 4px rgba(0,0,0,0.2);
     transition: 0.3s;
 overflow:hidden;
