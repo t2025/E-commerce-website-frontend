@@ -22,22 +22,25 @@
 
 </head>
 <body>
+  <!-- Header of the site starts-->
 <div class=" row header">
-  <div class="col-md-2 col-xs-4">
-    <img src="myntra-logo.jpg">
+   <div class="col-md-2 col-xs-4">
+      <img src="myntra-logo.jpg">
   </div>
-  <div class="app-name col-md-6 col-md-offset-2 col-xs-4">
-    <h1>MYNTRA</h1>
+     <div class="app-name col-md-6 col-md-offset-2 col-xs-4">
+       <h1>MYNTRA</h1>
   </div>
 
   <div class="cart col-md-2 col-xs-4">
-  <i class="fa fa-shopping-cart fa-5x" aria-hidden="true"></i>
+      <i class="fa fa-shopping-cart fa-5x" aria-hidden="true"></i>
   </div>
 </div>
-
+<!--Header ends here-->
+<!-- search container starts here-->
 <div class="row search-myntra">
-<div class="container col-md-1 col-xs-1"align="left">
-<div id="mySidenav" class="sidenav">
+    <div class="container col-md-1 col-xs-1"align="left">
+  <!-- side navigation bar starts here-->
+        <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="index.html">Home</a>
 
@@ -55,30 +58,33 @@
     <input type="text" name="search" placeholder="   search by brandname or productname" >
 </div>
     <div class="search-button col-md-4 col-xs-6">
-    <button class="button button1">Search</button>
-    <button class="button button2"id="sell">Sell</button>
+         <button class="button button1">Search</button>
+           <button class="button button2"id="sell">Sell</button>
 
   </div>
 </div>
+<!-- search bar ends here-->
+<!-- sell form container starts-->
 <div id="sell-myntra" class="col-md-6 col-md-offset-4 col-xs-12">
   <h1>Sell On Myntra</h1>
-  <form name="Sellform" onsubmit="return validateform()" method="post">
-    <label for="pname">Product-Name</label>
-      <input type="text" id=pname name="productname">
-      <label for="bname">Brand Name</label>
-        <input type="text" id="bname" name="brandname">
+  <!-- Sell form starts-->
+       <form name="Sellform" onsubmit="return validateform()" method="post">
+         <label for="pname">Product-Name</label>
+           <input type="text" id=pname name="productname">
+            <label for="bname">Brand Name</label>
+             <input type="text" id="bname" name="brandname">
 
-        <select id="size" name="size">
-        <option value="Size">Size</option>
-        <option value="small">Small</option>
-        <option value="medium">Medium</option>
-        <option value="large">Large</option>
+              <select id="size" name="size">
+              <option value="Size">Size</option>
+               <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                  <option value="large">Large</option>
       </select>
-      <select id="gender" name="gender">
+          <select id="gender" name="gender">
 
-        <option value="gender">Gender</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
+           <option value="gender">Gender</option>
+            <option value="Male">Male</option>
+             <option value="Female">Female</option>
       </select>
       <select id="quantity" name="quantity">
         <option value="quantity">1</option>
@@ -94,57 +100,67 @@
       </select>
 <br>
     <label for="category">Product Category</label>
-    <input type="text" id="category" name="category">
+        <input type="text" id="category" name="category">
 
-    <label for="price">Price</label>
-    <input type="text" id="price" name="price">
-    <label for="discount">Discount</label>
-    <input type="text" id="discount" name="discount">
-    <button >Choose Image</button>
+          <label for="price">Price</label>
+            <input type="text" id="price" name="price">
+                 <label for="discount">Discount</label>
+                   <input type="text" id="discount" name="discount">
+                      <button >Choose Image</button>
     <br>
-    <label for="description">Description</label>
-    <input type="text" id="description" name="description">
-    <button>Sell</button>
-    <button id="close">Close</button>
+                      <label for="description">Description</label>
+                        <input type="text" id="description" name="description">
+                          <button>Sell</button>
+                             <button id="close">Close</button>
 
   </form>
+  <!--Sell forms end-->
+
 </div>
+<!--sell form container ends-->
+<!-- cart container starts here-->
 <div id="cart" class="col-md-6 col-md-offset-4 col-xs-12">
-  <h1> Cart</h1>
+      <h1> Cart</h1>
+  <!-- cart forms start -->
   <form id="purchase" method="put" name="cartform" onsubmit="return validatecartform()">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name">
-    <label for="email">Email</label>
-    <input type="text" id="email" name="email">
-    <label for="phonenumber">Phone Number</label>
-    <input type="text" id="number" name="number">
-    <div class="row">
-    <ul id="product-list" class="col-md-4 col-xs-4">
-    Product Name
-    </ul>
-    <ul class="col-md-4 col-xs-4"id="cost-list">
-    Price
-    </ul>
-    <ul class="col-md-4 col-xs-4"id="quant-list">
-      Quantity
-    </ul>
+       <label for="name">Name</label>
+         <input type="text" id="name" name="name">
+            <label for="email">Email</label>
+              <input type="text" id="email" name="email">
+                <label for="phonenumber">Phone Number</label>
+                 <input type="text" id="number" name="number">
+                 <div class="row">
+                  <ul id="product-list" class="col-md-4 col-xs-4">
+                  Product Name
+                     </ul>
+                     <ul class="col-md-4 col-xs-4"id="cost-list">
+                     Price
+                       </ul>
+                        <ul class="col-md-4 col-xs-4"id="quant-list">
+                     Quantity
+                         </ul>
 
 </div>
-<button>Pay</button>
-<button id="closecart">Close</button>
+       <button id="paybutton">Pay</button>
+         <button id="closecart">Close</button>
+</form>
+<!--cart form ends-->
 </div>
+<!-- cart conatiner ends-->
 
-</div>
+
+<!-- slideshow conatiner starts-->
 <div class="slideshow">
   <img class="mySlides" src="slideshow1.jpg">
-<img class="mySlides" src="slideshow2.jpg">
-<img class="mySlides" src="slideshow3.jpg">
+     <img class="mySlides" src="slideshow2.jpg">
+        <img class="mySlides" src="slideshow3.jpg">
 </div>
+<!--slideshow conatiner ends-->
 
 
-
-
+<!--Product container for product name image and brand-->
 <div class="product"></div>
+<!-- pagination-->
 <div class="page col-md-6 col-md-offset-6 col-xs-6 col-xs-offset-6">
   <a href="index.html">1</a>
   <a href="index.html">2</a>
@@ -152,10 +168,15 @@
   <a href="index.html">4</a>
   <a href="index.html">5</a>
 </div>
+<!--cart button click event-->
+<script>
+$(".cart").click(function(){
+  $("#cart").show();
+});
+</script>
 
 
-
-
+<!-- side navigation bar open and close-->
 <script>
 function openNav() {
     document.getElementById("mySidenav").style.width = "350px";
@@ -165,6 +186,7 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
 </script>
+<!--Slideshow of images-->
 <script>
 var slideIndex = 0;
 carousel();
@@ -181,31 +203,36 @@ function carousel() {
     setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 </script>
+<!--sell button click event-->
 <script>
 $("#sell").click(function(){
   $("#sell-myntra").show();
 });
 </script>
+<!-- cart in sidenav click event-->
 <script>
 $("#cartid").click(function(){
   $("#cart").show();
 });
 </script>
+<!-- sell form close button -->
 <script>
 $("#close").click(function(){
   $("#sell-myntra").hide();
 });
 </script>
+<!-- cart form close button-->
 <script>
 $("#closecart").click(function(){
   $("#cart").hide();
 });
 </script>
-
+<!-- cart form validation-->
 <script>
 function validateform()
 {
   var x=document.forms["cartform"]["name"].value;
+  console.log(x);
   var x=document.forms["cartform"]["email"].value;
   var x=document.forms["cartform"]["number"].value;
 
@@ -215,21 +242,36 @@ function validateform()
 }
 }
 </script>
+<!--sell form validation-->
 <script>
 function validatecartform()
 {
   var x=document.forms["Sellform"]["productname"].value;
   var x=document.forms["Sellform"]["brandname"].value;
   var x=document.forms["Sellform"]["category"].value;
-var x=  document.forms["Sellform"]["description"].value;
-var x=document.forms["Sellform"]["discount"].value;
- var x=document.forms["Sellform"]["price"].value;
+  var x=  document.forms["Sellform"]["description"].value;
+  var x=document.forms["Sellform"]["discount"].value;
+  var x=document.forms["Sellform"]["price"].value;
 
   if(x==""){
   alert("All fields are mandatory");
   return false;
 }
 }
+</script>
+<script>
+$("#paybutton").click(function(){
+
+var x=document.forms["cartform"]["name"].value;
+var x=document.forms["cartform"]["email"].value;
+var x=document.forms["cartform"]["number"].value;
+var val=document.getElementById(name,email,number);
+if(x==val)
+{
+alert("payment successful");
+}
+$("#cart").hide();
+});
 </script>
 
 
