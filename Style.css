@@ -250,7 +250,7 @@ overflow:hidden;
 @media(max-width: 768px){
   .product-container{
   margin-left: 40px;
-  margin-right: 20px;
+  margin-right: 40px;
 overflow: hidden;
 
   }
