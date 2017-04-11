@@ -95,6 +95,20 @@ padding-left: 30px;
   color: white;
 
 }
+@media(max-width: 768px)
+{
+  .button1{
+    font-size: 12px;
+    width: 70px
+  }
+}
+@media(max-width: 768px)
+{
+  .button2{
+    font-size: 12px;
+    width: 70px
+  }
+}
 
 .sidenav {
     height: 100%; /* 100% Full-height */
