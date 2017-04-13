@@ -94,7 +94,7 @@ $.ajax({
     "filters":[
     {
       "name" : "brand",
-      "value": "pepe"
+      "value": searchquery
     },
   ]
 }),
