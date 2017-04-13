@@ -166,14 +166,31 @@ $("#sellbutton").click(function() {
   var discountfield=$("#discount").val();
   var descrfield=$("#description").val();
   var sellerfield=$("#seller").val();
-  var sellbody="item_name" +namefield  +  "brand"+brandfield +  "size"+ "42"+"price"+ pricefield+"sold_by"+sellerfield+"quantity"+ "22"+"gender"+ "male"+"item_code"+ "AP-11" + "item_category"+ categoryfield+ "image" +""  +"description"+descrfield;
+
   $.ajax({
     url: "http://acadprojects.com/py/fabricKart/sell",
     type: "POST",
+    beforeSend: function(xhr) {
+      xhr.setRequestHeader("Content-type", "application/json");
+    },
 
-    data : sellbody,
+    data : JSON.stringify({
+      "item_name" : namefield,
+      "brand": brandfield,
+      //"size": "42",
+    "price": pricefield,
+    "sold_by": sellerfield,
+    //"quantity": "22",
+    //"gender": "male",
+    "item_code": "AP-11",
+    "item_category": categoryfield,
+    "image": "",
+    "brand": brandfield,
+    "description": descrfield
+  }),
+
     success:function(response){
-      alert(response);
+      console.log(response);
     }
 
 });
