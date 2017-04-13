@@ -2,18 +2,17 @@ html ,body{
   max-width: 100%;
   overflow-x: hidden;
 }
-.header
- {
+.header {
   background-color: #C12E80;
 }
-.app-name{
+.app-name   {
   font-size: 20px;
   font-weight: 600;
   font-family: 'Droid Serif',cursive;
   color: white ;
 }
 
-.search-myntra{
+.search-myntra   {
   width: 100vw;
   height: 80px;
   border-top: solid black 2px;
@@ -33,8 +32,7 @@ html ,body{
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
-
-     width: 130px;
+    width: 130px;
      margin-top: 0px;
 
     box-sizing: border-box;
@@ -42,7 +40,6 @@ html ,body{
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
-
     background-position:  10px;
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
@@ -54,10 +51,9 @@ html ,body{
     width: 100%;
 }
 .search-button {
-
-margin-top: 10px;
-margin-left: 20px;
-padding-left: 30px;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding-left: 30px;
 
 }
 .button1 {
@@ -72,8 +68,6 @@ padding-left: 30px;
     width: 120px;
     font-family: 'Droid Serif',cursive;
 }
-
-
 .button1:hover {
     background-color: #C12E80 ;
     color: white;
@@ -165,10 +159,6 @@ overflow: hidden;
 
   z-index: 1;
   position: absolute;
-
-
-
-
 }
 #sell-myntra h1{
   text-align: center;
@@ -209,7 +199,6 @@ position:relative;
   border-radius: 5px;
   background-color: #FBFCFC  ;
   padding: 20px;
-
   z-index: 1;
   position: absolute;
 
@@ -252,11 +241,11 @@ overflow: hidden;
   height: 400px;
   text-align: center;
   margin-top:30px;
-margin-left: 100px;
-width: 340px;
+  margin-left: 100px;
+  width: 340px;
   box-shadow: 0 4px 4px rgba(0,0,0,0.2);
-    transition: 0.3s;
-overflow:hidden;
+  transition: 0.3s;
+  overflow:hidden;
 
 
 
@@ -265,7 +254,7 @@ overflow:hidden;
   .product-container{
   margin-left: 0px;
   margin-right: 0px;
-overflow: hidden;
+  overflow: hidden;
 
   }
 }
