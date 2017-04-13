@@ -1,4 +1,97 @@
+// cart form event
+$(".cart").click(function(){
+  $("#cart").show();
+});
+// side nav event
+function openNav() {
+    document.getElementById("mySidenav").style.width = "350px";
+}
 
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+//sell form event
+
+$("#sell").click(function(){
+  $("#sell-myntra").show();
+});
+
+
+$("#cartid").click(function(){
+  $("#cart").show();
+});
+// close sell form
+$("#close").click(function(){
+  $("#sell-myntra").hide();
+});
+// close cart form
+$("#closecart").click(function(){
+  $("#cart").hide();
+});
+// validation of form
+function validateform()
+{
+  var x=document.forms["cartform"]["name"].value;
+  console.log(x);
+  var y=document.forms["cartform"]["email"].value;
+  var z=document.forms["cartform"]["number"].value;
+
+  if(x==""){
+  alert("All fields are mandatory");
+  return false;
+}
+if(y==""){
+alert("All fields are mandatory");
+return false;
+}
+if(z==""){
+alert("All fields are mandatory");
+return false;
+}
+}
+// validation of sell form
+function validatecartform()
+{
+  var prname=document.forms["Sellform"]["productname"].value;
+  var brname =document.forms["Sellform"]["brandname"].value;
+  var categoryvar=document.forms["Sellform"]["category"].value;
+  var descrvar=  document.forms["Sellform"]["description"].value;
+  var discountvar=document.forms["Sellform"]["discount"].value;
+  var pricevar=document.forms["Sellform"]["price"].value;
+  var sellvar=document.forms["Sellform"]["seller"].value;
+
+  if(prname==""){
+  alert("All fields are mandatory");
+  return false;
+}
+if(brname==""){
+alert("All fields are mandatory");
+return false;
+}
+if(categoryvar==""){
+alert("All fields are mandatory");
+return false;
+}
+if(descrvar==""){
+alert("All fields are mandatory");
+return false;
+}
+if(discountvar==""){
+alert("All fields are mandatory");
+return false;
+}
+if(pricevar==""){
+alert("All fields are mandatory");
+return false;
+}
+}
+
+
+
+
+
+// sort api call
 $(document).ready(function(){
   $.ajax({
     url:"http://acadprojects.com/py/fabricKart/sort/items",
@@ -56,6 +149,17 @@ $(document).ready(function(){
 
 
 
+  });
+  $(".product-name").append(localStorage.getItem("productName"));
+  var image=$("<img>").attr("src",localStorage.getItem("image"));
+  $(".image").append(image);
+  $(".brandname").append(localStorage.getItem("brandname"));
+  $(".descr").append(localStorage.getItem("description"));
+  $(".soldby").append(localStorage.getItem("soldby"));
+  $(".quant").append(localStorage.getItem("itemnumber"));
+  $(".price").append(localStorage.getItem("pcost"));
+  $("#cartbutton").click(function(){
+  alert('The item has been added to cart');
   });
   $(".icon").click(function(){
     var productName=$($(this).parent().find(".productcontainer")).text();

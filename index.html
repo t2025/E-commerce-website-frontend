@@ -169,7 +169,7 @@
 
 <!--Product container for product name image and brand-->
 <div class="product"></div>
-<div class="brandfilter"></div>
+
 <!-- pagination-->
 <div class="page col-md-6 col-md-offset-6 col-xs-6 col-xs-offset-6">
   <a href="index.html">1</a>
@@ -178,25 +178,6 @@
   <a href="index.html">4</a>
   <a href="index.html">5</a>
 </div>
-<!--cart button click event-->
-<script>
-$(".cart").click(function(){
-  $("#cart").show();
-});
-</script>
-
-
-<!-- side navigation bar open and close-->
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "350px";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-</script>
-<!--Slideshow of images-->
 <script>
 var slideIndex = 0;
 carousel();
@@ -212,97 +193,6 @@ function carousel() {
     x[slideIndex-1].style.display = "block";
     setTimeout(carousel, 2000); // Change image every 2 seconds
 }
-</script>
-<!--sell button click event-->
-<script>
-$("#sell").click(function(){
-  $("#sell-myntra").show();
-});
-</script>
-<!-- cart in sidenav click event-->
-<script>
-$("#cartid").click(function(){
-  $("#cart").show();
-});
-</script>
-<!-- sell form close button -->
-<script>
-$("#close").click(function(){
-  $("#sell-myntra").hide();
-});
-</script>
-<!-- cart form close button-->
-<script>
-$("#closecart").click(function(){
-  $("#cart").hide();
-});
-</script>
-<!-- cart form validation-->
-<script>
-function validateform()
-{
-  var x=document.forms["cartform"]["name"].value;
-  console.log(x);
-  var x=document.forms["cartform"]["email"].value;
-  var x=document.forms["cartform"]["number"].value;
-
-  if(x==""){
-  alert("All fields are mandatory");
-  return false;
-}
-}
-</script>
-<!--sell form validation-->
-<script>
-function validatecartform()
-{
-  var prname=document.forms["Sellform"]["productname"].value;
-  var brname =document.forms["Sellform"]["brandname"].value;
-  var categoryvar=document.forms["Sellform"]["category"].value;
-  var descrvar=  document.forms["Sellform"]["description"].value;
-  var discountvar=document.forms["Sellform"]["discount"].value;
-  var pricevar=document.forms["Sellform"]["price"].value;
-  var sellvar=document.forms["Sellform"]["seller"].value;
-
-  if(prname==""){
-  alert("All fields are mandatory");
-  return false;
-}
-if(brname==""){
-alert("All fields are mandatory");
-return false;
-}
-if(categoryvar==""){
-alert("All fields are mandatory");
-return false;
-}
-if(descrvar==""){
-alert("All fields are mandatory");
-return false;
-}
-if(discountvar==""){
-alert("All fields are mandatory");
-return false;
-}
-if(pricevar==""){
-alert("All fields are mandatory");
-return false;
-}
-}
-</script>
-<script>
-$("#paybutton").click(function(){
-
-var x=document.forms["cartform"]["name"].value;
-var x=document.forms["cartform"]["email"].value;
-var x=document.forms["cartform"]["number"].value;
-var val=document.getElementById(name,email,number);
-if(x==val)
-{
-alert("payment successful");
-}
-$("#cart").hide();
-});
 </script>
 
 
