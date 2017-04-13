@@ -56,10 +56,10 @@
 </div>
 
   <div class="Search col-md-6 col-xs-4">
-    <input type="text" name="search" placeholder="   search by brandname or productname" >
+    <input type="text"id="search" name="search" placeholder="   search by brandname or productname" >
 </div>
     <div class="search-button col-md-4 col-xs-6">
-         <button class="button button1">Search</button>
+         <button class="button button1" id=searchbutton>Search</button>
            <button class="button button2"id="sell">Sell</button>
 
   </div>
@@ -69,7 +69,7 @@
 <div id="sell-myntra" class="col-md-6 col-md-offset-4 col-xs-12">
   <h1>Sell On Myntra</h1>
   <!-- Sell form starts-->
-       <form name="Sellform" onsubmit="return validateform()" method="post">
+       <form name="Sellform" onsubmit="return validatecartform()" method="post">
          <label for="pname">Product-Name</label>
            <input type="text" id=pname name="productname">
             <label for="bname">Brand Name</label>
@@ -111,19 +111,25 @@
     <br>
                       <label for="description">Description</label>
                         <input type="text" id="description" name="description">
-                          <button>Sell</button>
+                        <label for="seller">Seller</label>
+                        <input type="text" id="seller" name="seller">
+                          <button id="sellbutton">Sell</button>
                              <button id="close">Close</button>
 
   </form>
   <!--Sell forms end-->
 
 </div>
+<div class="notification">
+  <p>Item is sold successfully</p>
+</div>
+
 <!--sell form container ends-->
 <!-- cart container starts here-->
 <div id="cart" class="col-md-6 col-md-offset-4 col-xs-12">
       <h1> Cart</h1>
   <!-- cart forms start -->
-  <form id="purchase" method="put" name="cartform" onsubmit="return validatecartform()">
+  <form id="purchase" method="put" name="cartform" onsubmit="return validateform()">
        <label for="name">Name</label>
          <input type="text" id="name" name="name">
             <label for="email">Email</label>
@@ -150,6 +156,8 @@
 <!-- cart conatiner ends-->
 
 
+
+
 <!-- slideshow conatiner starts-->
 <div class="slideshow">
   <img class="mySlides" src="slideshow1.jpg">
@@ -161,6 +169,7 @@
 
 <!--Product container for product name image and brand-->
 <div class="product"></div>
+<div class="brandfilter"></div>
 <!-- pagination-->
 <div class="page col-md-6 col-md-offset-6 col-xs-6 col-xs-offset-6">
   <a href="index.html">1</a>
@@ -247,16 +256,37 @@ function validateform()
 <script>
 function validatecartform()
 {
-  var x=document.forms["Sellform"]["productname"].value;
-  var x=document.forms["Sellform"]["brandname"].value;
-  var x=document.forms["Sellform"]["category"].value;
-  var x=  document.forms["Sellform"]["description"].value;
-  var x=document.forms["Sellform"]["discount"].value;
-  var x=document.forms["Sellform"]["price"].value;
+  var prname=document.forms["Sellform"]["productname"].value;
+  var brname =document.forms["Sellform"]["brandname"].value;
+  var categoryvar=document.forms["Sellform"]["category"].value;
+  var descrvar=  document.forms["Sellform"]["description"].value;
+  var discountvar=document.forms["Sellform"]["discount"].value;
+  var pricevar=document.forms["Sellform"]["price"].value;
+  var sellvar=document.forms["Sellform"]["seller"].value;
 
-  if(x==""){
+  if(prname==""){
   alert("All fields are mandatory");
   return false;
+}
+if(brname==""){
+alert("All fields are mandatory");
+return false;
+}
+if(categoryvar==""){
+alert("All fields are mandatory");
+return false;
+}
+if(descrvar==""){
+alert("All fields are mandatory");
+return false;
+}
+if(discountvar==""){
+alert("All fields are mandatory");
+return false;
+}
+if(pricevar==""){
+alert("All fields are mandatory");
+return false;
 }
 }
 </script>

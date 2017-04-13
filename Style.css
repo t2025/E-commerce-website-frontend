@@ -373,3 +373,14 @@ line-height: 30px;
   width: 170px;
   font-family: 'Droid Serif',cursive;
 }
+.notification{
+  width: 500px;
+  height: 200px;
+  color : black;
+  background-color: black;
+  display: none;
+
+}
+.notification p{
+  color: white;
+}
