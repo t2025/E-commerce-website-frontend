@@ -1,7 +1,3 @@
-// cart form event
-$(".cart").click(function(){
-  $("#cart").show();
-});
 // side nav event
 function openNav() {
     document.getElementById("mySidenav").style.width = "350px";
@@ -10,6 +6,12 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+
+$(document).ready(function(){
+// cart form event
+$(".cart").click(function(){
+  $("#cart").show();
+});
 //sell form event
 $("#sell").click(function(){
   $("#sell-myntra").show();
@@ -81,7 +83,7 @@ return false;
 }
 }
 // sort api call
-$(document).ready(function(){
+
   $.ajax({
     url:"http://acadprojects.com/py/fabricKart/sort/items",
     type: 'GET',
