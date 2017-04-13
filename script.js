@@ -156,7 +156,7 @@ $("#cartbutton").click(function(){
   //filter items
 $("#searchbutton").click(function(){
 var searchquery= $("#search").val();
-$(".container").empty();
+$(".product").empty();
 //filter ajax call
 $.ajax({
   url:"http://acadprojects.com/py/fabricKart/filter/items",
@@ -175,8 +175,7 @@ $.ajax({
 }),
 success: function(response) {
   console.log(response);
-  $("#sell-myntra").show();
-  var data=response["data"];
+   var data=response["data"];
    console.log("data");
    data.forEach(function(product,index){
    var element="<div class='product-container col-md-4 col-xs-12'></div>";
