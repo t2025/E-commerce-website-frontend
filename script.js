@@ -81,7 +81,7 @@ $(document).ready(function(){
 
 $("#searchbutton").click(function(){
 var searchquery= $("#search").val();
-
+$(".container").empty();
 
 $.ajax({
   url:"http://acadprojects.com/py/fabricKart/filter/items",
