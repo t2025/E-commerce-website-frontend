@@ -158,7 +158,13 @@ console.log("data");
 });
 });
 });
-$("#sellbutton").click(function() {
+
+
+$("#sellbutton").click(function(event) {
+  event.preventDefault();
+
+
+
   var namefield= $("#pname").val();
   var brandfield=$("#bname").val();
   var categoryfield=$("#category").val();
@@ -177,11 +183,11 @@ $("#sellbutton").click(function() {
     data : JSON.stringify({
       "item_name" : namefield,
       "brand": brandfield,
-      //"size": "42",
+      "size": "42",
     "price": pricefield,
     "sold_by": sellerfield,
-    //"quantity": "22",
-    //"gender": "male",
+    "quantity": "22",
+    "gender": "male",
     "item_code": "AP-11",
     "item_category": categoryfield,
     "image": "",
